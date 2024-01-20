@@ -1,0 +1,32 @@
+{
+  "users": [
+    {
+      "id": "5010",
+      "name": "Randhir Kumar",
+      "email": "randhir@gmail.com",
+      "phone": "789456256",
+      "address": "Noida"
+    },
+    {
+      "id": "363b",
+      "name": "Bittu Kumar",
+      "email": "bittukumar@gmail.com",
+      "phone": "789456256",
+      "address": "New Delhi"
+    },
+    {
+      "id": "8820",
+      "name": "Gaurav Sharma",
+      "email": "gaurav@gmail.com",
+      "phone": "7895586588",
+      "address": "Uttam Nagar"
+    },
+    {
+      "id": "8ee1",
+      "name": "Priti",
+      "email": "priti@gmail.com",
+      "phone": "789456123",
+      "address": "Uttam Nagar"
+    }
+  ]
+}
