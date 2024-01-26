@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
+import Filter from "./Filter";
 const CustomerList = () => {
   const [columns, setColumns] = useState([]);
   const [data, setData] = useState([]);
+  const [input, setInput] = useState("");
   const navigate = useNavigate();
   useEffect(() => {
     fetchData();
@@ -19,6 +21,19 @@ const CustomerList = () => {
     console.log(resp);
     navigate("/");
   };
+  const applyFilter =()=>{
+    // console.log("Input",input);
+    let orignal = data;
+    const res=orignal.filter((e)=>{
+      let name=e.name.toLowerCase();
+      return name===input.toLowerCase();
+    });
+   setData(res);
+  }
+  const reset =()=>{
+    console.log("reset");
+    console.log("data",data);
+  }
   return (
     <div className="container mt-5">
       <h1 className="text-center m-3">Customer Management Application</h1>
@@ -27,6 +42,48 @@ const CustomerList = () => {
           Create New Customer
         </Link>
       </div>
+      <>
+      <input
+        type="text"
+        className="mb-2"
+        placeholder="Search..."
+        onChange={(e)=>setInput(e.target.value)}
+        style={{
+          outline: "none",
+          padding: "5px",
+          border: "none",
+          borderRadius: "5px",
+        }}
+      ></input>
+      <button
+        type="submit"
+        className="mt-2 search-button"
+        onClick={()=>applyFilter()}
+        style={{
+          outline: "1px solid rgba(255, 125, 255, 0.7)",
+          padding: "5px",
+          border: "none",
+          borderRadius: "5px",
+          marginLeft: "5px",
+        }}
+      >
+        Search
+      </button>
+      <button
+        type="submit"
+        className="mt-2 search-button"
+        onClick={()=>reset()}
+        style={{
+          outline: "1px solid rgba(255, 125, 255, 0.7)",
+          padding: "5px",
+          border: "none",
+          borderRadius: "5px",
+          marginLeft: "5px",
+        }}
+      >
+        Reset
+      </button>
+    </>
       <table className="table table-bordered text-center table-hover table-dark">
         <thead>
           <tr>
