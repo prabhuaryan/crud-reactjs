@@ -41,7 +41,7 @@ const CustomerForm = () => {
           Back
         </Link>
       </div>
-      <form method="post" onSubmit={handleSubmit}>
+      <form method="post" onSubmit={handleSubmit} autoFocus="none">
         <div className="form-group">
           <label for="name">Name</label>
           <input

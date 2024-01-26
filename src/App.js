@@ -2,6 +2,7 @@ import { RouterProvider } from "react-router-dom";
 import "./App.css";
 import router from "./components/AppRouter";
 
+
 function App() {
   return (
     <>
