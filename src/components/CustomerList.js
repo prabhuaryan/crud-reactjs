@@ -38,8 +38,8 @@ const CustomerList = () => {
     <div className="container mt-5">
       <h1 className="text-center m-3">Customer Management Application</h1>
       <div className="text-start mb-2">
-        <Link className="btn btn-outline-success btn-sm" to="/create">
-          Create New Customer
+        <Link className="btn btn-outline-success  btn-sm" to="/create">
+          Create New Customer 
         </Link>
       </div>
       <>
